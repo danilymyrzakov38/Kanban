@@ -1,0 +1,378 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Стилизация вертикальной полосы прокрутки */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #CBCBCB;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #fff; /* Цвет фона полосы прокрутки */
+}
+
+/* Стилизация Select */
+/* Стили для элементов списка */
+select option {
+  padding: 8px;
+  background-color: #fff;
+  color: #000;
+  font-family: Roboto;
+  font-size: 18px;
+}
+
+/* Стили для элементов списка при наведении курсора */
+select option:hover {
+  background-color: #ddd;
+}
+
+/* Стили для выбранного элемента списка */
+select option:checked {
+  background-color: #0079BF;
+  color: #fff;
+}
+
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: none;
+}
+
+button, a {
+  cursor: pointer;
+  background-color: transparent;
+}
+
+#root {
+  background-color: #0079BF;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.content {
+  max-width: 1216px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+h5 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+nav {
+  background-color: #0067A3;
+  width: 100%;
+  color: #fff;;
+}
+
+#root .item:last-child {
+  align-self: auto;
+}
+
+.nav {
+  position: relative;
+  display: flex;
+  background-color: #0067A3;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 8px 0px 7px;
+}
+
+.profile button {
+  background-color: transparent;
+}
+
+.profileInfo__container {
+  top: 56px;
+  position: absolute;
+  background-color: #fff;
+  display: block;
+  padding: 8px 0px 5px 7px;
+  width: 134px;
+  border-radius: 5px;
+  right: 0px;
+
+  display: none;
+}
+
+.profileInfo__container img {
+  display: block;
+  position: relative;
+  top: -15px;
+  right: 0px;
+  left: 82px;
+}
+
+.profileInfo__container button {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.profileInfo__container button p {
+  color: #000;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.profileInfo__container button p:hover {
+  color: grey;
+}
+
+.main__container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.task__component {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  /* display: none; */
+}
+
+.task__component__div {
+  border-radius: 10px;
+  padding: 12px 0px 8px 12px;
+  background: #EBECF0;
+  width: 282px;
+  height: fit-content;
+}
+
+.task__component__div__container {
+  overflow: auto; 
+  max-height: 300px;
+}
+
+.task__component__div__container__tasks {
+  padding: 7px 0px 7px 8px;
+  background-color: #fff;
+  border-radius: 5px;
+  width: 93%;
+  margin-top: 15px;
+
+  color: #000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  word-wrap: break-word;
+}
+
+.task__component__div__container__tasks input, .task__component__div__container__tasks select {
+  width: 100%;
+  min-height: 36px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.task__component__div__container__tasks input:focus, .task__component__div__container__tasks select:focus {
+  outline: none;
+}
+
+.task__component__div__btn, .task__component__div__btn--submit {
+  border-radius: 5px;
+  margin-top: 17px;
+  display: flex;
+  background-color: transparent;
+  color: #5E6C84;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding: 4px 14px;
+}
+
+.task__component__div__btn--submit {
+  background-color: #0079BF;
+  color: #fff;
+  padding: 4px 14px;
+}
+
+.task__component__div__btn:disabled, .task__component__div__btn--submit:disabled {
+  cursor: not-allowed;
+  background-color: #8a8a8a;
+  color: #fff;
+}
+
+.task__component__div__btn--content__text {
+  display: flex;
+}
+.task__component__div__btn--content__text--text {
+  margin-left: 3px;
+}
+
+.AboutTheTask {
+  /* display: none; */
+  padding-top: 2%;
+}
+
+.container__AboutTheTask {
+  padding: 28px 22px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.AboutTheTask__container {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.AboutTheTask__container--text {
+  height: 374px;
+
+  width: 100%;
+}
+
+.AboutTheTask__container--text h1 {
+  color: #000;
+  font-family: Roboto;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.AboutTheTask__container--text textarea{
+  resize: none;
+  overflow: auto;
+  padding-top: 35px;
+  color: #000;
+  font-family: Roboto;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+  width: 100%;
+  height: 80%;
+}
+
+.AboutTheTask__container--btnHide__container {
+  display: flex;
+  align-items: flex-start;
+}
+
+footer {
+  background-color: #0067A3;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+}
+
+.footer {
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 17px 0px;
+}
+
+.footer__hotkeys {
+  display: flex;
+}
+
+.footer__hotkeys--n {
+  margin-right: 36px;
+}
+
+@media (max-width: 1250px) { 
+  .content {
+    max-width: 90%;
+  }
+
+  .task__component__div {
+    width: 240px;
+  }
+}
+
+@media (max-width: 1170px) { 
+  .task__component__div {
+    width: 220px;
+  }
+}
+
+@media (max-width: 1070px) { 
+  #root {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+  .AboutTheTask {
+    height: 100%;
+    width: 80%;  
+  }
+
+  .task__component__div {
+    width: 300px;
+    margin-bottom: 90px;
+  }
+
+  .task__component {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer {
+    position: relative;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 800px) { 
+  nav, .nav {
+    background-color: transparent;
+  }
+
+  .nav {
+    justify-content: flex-end;
+  }
+
+  .nav h1, .footer {
+    display: none;
+  }
+}
